@@ -1,0 +1,58 @@
+import { CareerCategory } from '../types';
+
+export const CAREER_CATEGORIES: CareerCategory[] = [
+  {
+    id: 'cat-creative-comm',
+    code: 'creative_comm',
+    title: 'Creative & Communication',
+    subtitle: 'Storytelling, copywriting, design synthesis, and multi-channel content strategy powered by generative AI.',
+    description: 'Focuses on creating engaging editorial content, brand narratives, marketing collateral, and social media campaigns using modern generative AI writing, imagery, and audio tools.',
+    iconName: 'PenTool',
+    displayOrder: 1,
+  },
+  {
+    id: 'cat-business-ops',
+    code: 'business_ops',
+    title: 'Business & Productivity',
+    subtitle: 'Synthesizing market research, drafting executive briefings, and optimizing daily business operations.',
+    description: 'Empowers organizations to run leaner and faster by applying AI to operational bottlenecks, document summarization, competitive intelligence, and administrative workflows.',
+    iconName: 'Briefcase',
+    displayOrder: 2,
+  },
+  {
+    id: 'cat-automation-tools',
+    code: 'automation_tools',
+    title: 'Automation & Tools',
+    subtitle: 'Connecting cloud apps, designing AI chatbot assistants, and engineering no-code workflow pipelines.',
+    description: 'Bridges software tools without writing complex backend code. Builds autonomous multi-step automations, intelligent chatbots, and custom agents for operational efficiency.',
+    iconName: 'Cpu',
+    displayOrder: 3,
+  },
+  {
+    id: 'cat-people-edu',
+    code: 'people_edu',
+    title: 'People & Education',
+    subtitle: 'Training teams on AI adoption, instructional design, ethical usage, and change enablement.',
+    description: 'Focuses on the human side of technological change. Guides team members, educators, and enterprise staff through AI literacy, prompt craft, and workflow integration.',
+    iconName: 'Users',
+    displayOrder: 4,
+  },
+  {
+    id: 'cat-customer-exp',
+    code: 'customer_exp',
+    title: 'Customer Experience',
+    subtitle: 'Elevating support response speed, structuring knowledge repositories, and human-in-the-loop CX.',
+    description: 'Combines empathetic customer care with AI-driven ticketing, semantic search knowledge bases, and conversational triage to resolve customer needs smoothly.',
+    iconName: 'Headphones',
+    displayOrder: 5,
+  },
+  {
+    id: 'cat-data-tech',
+    code: 'data_tech',
+    title: 'Data & Technology',
+    subtitle: 'Analyzing business datasets, coordinating AI software features, and building AI-augmented software.',
+    description: 'Drives technical discovery through structured data analysis, prompt engineering, LLM API integration, and AI feature coordination across engineering roadmaps.',
+    iconName: 'Database',
+    displayOrder: 6,
+  },
+];

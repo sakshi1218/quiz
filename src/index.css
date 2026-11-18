@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Glassmorphism & Modern Card Styling */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-panel-dark {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.gradient-border {
+  position: relative;
+  background: linear-gradient(135deg, #255beb, #845be9);
+  padding: 1px;
+  border-radius: 1rem;
+}
+
+/* Print Stylesheet for Participant Report */
+@media print {
+  /* Hide non-report interactive elements */
+  nav,
+  header,
+  footer,
+  .no-print,
+  button,
+  .print-hide {
+    display: none !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #root {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 12mm 15mm !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .print-page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  .print-avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .glass-panel {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+
+  /* Printable Header & Footer */
+  .print-header {
+    display: block !important;
+    border-bottom: 2px solid #255beb;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+  }
+
+  .print-footer {
+    display: block !important;
+    border-top: 1px solid #cbd5e1;
+    padding-top: 10px;
+    margin-top: 30px;
+    font-size: 8.5pt !important;
+    color: #64748b !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #0f172a !important;
+  }
+}
+
+@keyframes scan {
+  0%, 100% {
+    top: 10%;
+    opacity: 0.3;
+  }
+  50% {
+    top: 85%;
+    opacity: 0.9;
+  }
+}
+
+.animate-scan {
+  animation: scan 2.5s ease-in-out infinite;
+}
